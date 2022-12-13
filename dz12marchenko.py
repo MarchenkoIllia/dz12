@@ -45,4 +45,12 @@ def ReverseStr(file):
         f.writelines(str1)
 # ReverseStr("text.txt")
 
-# Удаление заданной  по номеру строки из файла
+# Удаление заданной по номеру строки из файла
+def DeleteStr(file, n:int):
+    with open(file, 'r') as f:
+        string = f.readlines()
+    with open(file, 'w') as f:
+        n-=1
+        string.pop(n)
+        f.writelines(string)
+DeleteStr("text2.txt",1)
