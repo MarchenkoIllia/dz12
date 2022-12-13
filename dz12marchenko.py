@@ -15,3 +15,20 @@ def FindNChange(file, word_in_file, new_word):
 
 # FindNChange("text.txt", "as", "new")
 
+
+# Подсчет количества слов в содержимом текстового файла, которые не являются числами
+def CountWords(file):
+    with open(file, mode='r') as f:
+        str1 = f.readline()
+        str1 = str1.split(' ')
+        print(str1)
+        n = 0
+        for i in str1:
+            if i == int:
+                n+=0
+            elif i == bool:
+                n+=0
+            n+=1
+    print(f'Кол-во слов, которые не являются числами в файле: {n}')
+
+CountWords("text.txt")
