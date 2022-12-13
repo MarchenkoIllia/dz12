@@ -1,6 +1,6 @@
 # Поиск и замена слов в содержимом текстового файла
 
-# You are an inspiration for lots of people.
+# You are an inspiration for lots of people
 def FindNChange(file, word_in_file, new_word):
     with open(file, mode='r') as f:
         str1 = f.readline()
@@ -31,4 +31,18 @@ def CountWords(file):
             n+=1
     print(f'Кол-во слов, которые не являются числами в файле: {n}')
 
-CountWords("text.txt")
+# CountWords("text.txt")
+
+# Вывести слова содержимого файла  в обратном порядке
+def ReverseStr(file):
+    with open(file, mode='r') as f:
+        str1 = f.readline()
+        str1 = str1.split(' ')
+        str1.reverse()
+    
+    with open(file, 'w') as f:
+        str1 = ' '.join(str1)
+        f.writelines(str1)
+# ReverseStr("text.txt")
+
+# Удаление заданной  по номеру строки из файла
