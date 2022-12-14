@@ -26,8 +26,6 @@ def CountWords(file):
         for i in str1:
             if i == int:
                 n+=0
-            elif i == bool:
-                n+=0
             n+=1
     print(f'Кол-во слов, которые не являются числами в файле: {n}')
 
